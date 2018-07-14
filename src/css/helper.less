@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
+
+@wDesktop:     ~'1240px';
+@wDesktopM:    ~'1239px';
+@wTabletWide:  ~'992px';
+@wTabletWideM: ~'991px';
+@wTablet:      ~'768px';
+@wTabletM:     ~'767px';
+@wMobile:      ~'480px';
+@wMobileM:     ~'479px';
+
+
+/* Flex */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex_inline {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.flex_sb {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.flex_ac {
+  -webkit-align-items: center;
+  align-items: center;
+}
+.flex_hc {
+  justify-content: center;
+
+}
+.flex_center {
+  .flex_ac;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.flex_vertical {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.flex_wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.flex_grow {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.flex_no-grow {
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+.flex_no-shrink {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.flex_reverse{
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+.flex_reverse-column{
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.v_mid{ 
+top: 50%; 
+-ms-transform: translate(0,-50%); /* IE 9 */ 
+-webkit-transform: translate(0,-50%); /* Chrome, Safari, Opera */ 
+transform: translate(0,-50%); 
+position: absolute; 
+} 
+
+.i_center{ 
+top: 50%; 
+left:50%; 
+-ms-transform: translate(-50%,-50%); /* IE 9 */ 
+-webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */ 
+transform: translate(-50%,-50%); 
+position: absolute; 
+
+} 
+.h_mid{ 
+left: 50%; 
+-ms-transform: translate(-50%,0); /* IE 9 */ 
+-webkit-transform: translate(-50%,0); /* Chrome, Safari, Opera */ 
+transform: translate(-50%,0); 
+position: absolute; 
+} 
+
+  
+.cssAnimate(@time:0.1s, @type:linear){ 
+-moz-transition: all @time @type; 
+-o-transition: all @time @type; 
+-webkit-transition: all @time @type; 
+
+} 
+.animate{   
+  transition-duration: 0.3s;
+} 
+
+.cssRotate(@deg){ 
+-ms-transform: rotate(@deg); /* IE 9 */ 
+-webkit-transform: rotate(@deg); /* Chrome, Safari, Opera */ 
+transform: rotate(@deg); 
+
+} 
+
+.bg__dark{
+  &:before{
+     top: 0; 
+     right: 0; 
+     bottom: 0; 
+     left: 0;
+     position: absolute;
+     pointer-events: none;
+     content: "";
+     background: rgba(0,0,0,0.3);
+    
+  }
+}
+
+
+.fullSize(@positon:absolute){ 
+top: 0; 
+right: 0; 
+bottom: 0; 
+left: 0; 
+position:@positon; 
+
+} 
+
+.scale(@deg:0){ 
+-ms-transform: scale(@deg); /* IE 9 */ 
+-webkit-transform: scale(@deg); /* Chrome, Safari, Opera */ 
+transform: scale(@deg); 
+} 
+
+.rotate(@deg:0){ 
+-ms-transform: rotate(@deg); /* IE 9 */ 
+-webkit-transform: rotate(@deg); /* Chrome, Safari, Opera */ 
+transform: rotate(@deg); 
+} 
+.clearfix{
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+*{ 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+*:focus {
+    outline: none;
+}
+/* Margins */
+.mt_0 {
+    margin-top: 0;
+}
+.mt_5 {
+    margin-top: 5px;
+}
+.mt_10 {
+    margin-top: 10px;
+}
+.mt_15 {
+    margin-top: 15px;
+}
+.mt_20 {
+    margin-top: 20px;
+}
+.mt_25 {
+    margin-top: 25px;
+}
+.mt_30 {
+    margin-top: 30px;
+}
+.mt_35 {
+    margin-top: 35px;
+}
+.mt_40 {
+    margin-top: 40px;
+}
+.mt_45 {
+    margin-top: 45px;
+}
+.mt_50 {
+    margin-top: 50px;
+}
+.mt_55 {
+    margin-top: 55px;
+}
+.mt_60 {
+    margin-top: 60px;
+}
+.mt_65 {
+    margin-top: 65px;
+}
+.mt_70 {
+    margin-top: 70px;
+}
+.mt_80 {
+    margin-top: 80px;
+}
+.mt_85 {
+    margin-top: 85px;
+}
+.mb_0 {
+    margin-bottom: 0;
+}
+.mb_5 {
+    margin-bottom: 5px;
+}
+.mb_10 {
+    margin-bottom: 10px;
+}
+.mb_15 {
+    margin-bottom: 15px;
+}
+.mb_20 {
+    margin-bottom: 20px;
+}
+.mb_25 {
+    margin-bottom: 25px;
+}
+.mb_30 {
+    margin-bottom: 30px;
+}
+.mb_35 {
+    margin-bottom: 35px;
+}
+.mb_40 {
+    margin-bottom: 40px;
+}
+.mb_50 {
+    margin-bottom: 50px;
+}
+.mb_60 {
+    margin-bottom: 60px;
+}
+ 
+
+
+.t_center{
+  text-align: center;
+}
+*:focus {
+  outline: none;
+}
+
+.animate-left{
+  opacity: 0;
+  .animate;
+  pointer-events: none;
+  top:-2px;
+  transform: translate(10px, 0px);
+  &.active{
+      opacity: 1;
+      transform: translate(0px, 0px);
+      pointer-events: auto;
+  }
+}
+
+.animate-opacity{
+  opacity: 0;
+  .animate;
+  pointer-events: none;
+  &.active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
